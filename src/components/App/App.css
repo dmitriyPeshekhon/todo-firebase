@@ -1,0 +1,85 @@
+.container {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	background: rgb(253,193,195);
+	background: linear-gradient(90deg, rgba(253,193,195,1) 0%, rgba(154,112,200,1) 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tablo-container {
+	position: relative;
+}
+
+.tablo {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	width: 500px;
+	margin-bottom: 40px;
+	height: 75vh;
+	min-height: 500px;
+	padding: 25px 25px 0;
+	border-radius: 20px;
+	background: white;
+	overflow: auto;
+}
+
+.error {
+	align-self: center;
+	font-size: 18px;
+}
+
+.btn-add-todo {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	background: rgb(255, 183, 0);
+	color: white;
+	font-size: 45px;
+	box-shadow: 0 0 10px 5px rgba(51, 122, 183, 0.2);
+}
+
+.btn-add-todo:active {
+	box-shadow: none;
+}
+
+.loader {
+	align-self: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	background: linear-gradient(0deg, rgba(51, 122, 183, 0.2) 33%, rgba(154,112,200,1) 100%);
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+.loader::after {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	background: #FFFFFF;
+}
+@keyframes rotation {
+	0% {
+	transform: rotate(0deg);
+	}
+	100% {
+	transform: rotate(360deg);
+	}
+}

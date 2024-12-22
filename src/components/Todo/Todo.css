@@ -1,0 +1,11 @@
+.todo-container {
+	display: flex;
+	gap: 15px;
+}
+
+.title-todo {
+	flex-basis: 100%;
+	margin: 0;
+	line-height: 1;
+	font-size: 22px;
+}
